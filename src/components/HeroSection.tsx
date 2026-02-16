@@ -12,9 +12,9 @@ const socials = [
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center section-padding overflow-hidden">
-      <div className="relative z-10 w-full flex flex-col md:flex-row items-center md:items-center md:justify-between gap-10 max-w-6xl mx-auto">
+      <div className="relative z-10 w-full flex flex-col-reverse md:flex-row items-center md:items-center md:justify-between gap-10 max-w-6xl mx-auto">
         {/* Text content */}
-        <div className="flex-1">
+        <div className="flex-1 text-center md:text-left">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ const HeroSection = () => {
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-tight mb-4">
               <span className="text-gradient">Englama</span>
             </h1>
-            <div className="w-20 h-1 bg-primary mb-8" />
+            <div className="w-20 h-1 bg-primary mb-8 mx-auto md:mx-0" />
           </motion.div>
 
           <motion.p
@@ -58,7 +58,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap gap-4 mb-8"
+            className="flex flex-wrap gap-4 mb-8 justify-center md:justify-start"
           >
             <a
               href="https://drive.google.com/file/d/1wNuPvouf5B2wOCUlL12FuCo-twj03Rnp/view?usp=sharing"
@@ -74,7 +74,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="flex gap-4"
+            className="flex gap-4 justify-center md:justify-start"
           >
             {socials.map(({ icon: Icon, href, label }) => (
               <a
