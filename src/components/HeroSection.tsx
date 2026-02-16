@@ -12,36 +12,10 @@ const socials = [
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center section-padding overflow-hidden">
-      <div className="relative z-10 max-w-4xl">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
-          className="w-40 h-40 md:w-52 md:h-52 mb-8 relative"
-        >
-          {/* Abstract blob shape using clip-path */}
-          <div
-            className="w-full h-full overflow-hidden"
-            style={{
-              clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
-            }}
-          >
-            <img
-              src={profilePhoto}
-              alt="Kuceli Susan Englama"
-              className="w-full h-full object-cover object-top"
-            />
-          </div>
-          {/* Decorative offset border */}
-          <div
-            className="absolute inset-0 border-2 border-primary/30 translate-x-2 translate-y-2 -z-10"
-            style={{
-              clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
-            }}
-          />
-        </motion.div>
-
-        <motion.p
+      <div className="relative z-10 w-full flex flex-col md:flex-row items-center md:items-center md:justify-between gap-10 max-w-6xl mx-auto">
+        {/* Text content */}
+        <div className="flex-1">
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -116,6 +90,34 @@ const HeroSection = () => {
             ))}
           </motion.div>
         </div>
+
+        {/* Photo on the right */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 relative shrink-0"
+        >
+          <div
+            className="w-full h-full overflow-hidden"
+            style={{
+              clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
+            }}
+          >
+            <img
+              src={profilePhoto}
+              alt="Kuceli Susan Englama"
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
+          <div
+            className="absolute inset-0 border-2 border-primary/30 translate-x-2 translate-y-2 -z-10"
+            style={{
+              clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
+            }}
+          />
+        </motion.div>
+      </div>
     </section>
   );
 };
