@@ -11,42 +11,37 @@ const socials = [
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Photo side */}
-      <div className="hidden md:block absolute left-0 top-0 bottom-0 w-[45%]">
+    <section className="relative min-h-screen flex items-center section-padding overflow-hidden">
+      <div className="relative z-10 max-w-4xl">
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="h-full"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7 }}
+          className="w-40 h-40 md:w-52 md:h-52 mb-8 relative"
         >
-          <img
-            src={profilePhoto}
-            alt="Kuceli Susan Englama"
-            className="w-full h-full object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-background" />
-        </motion.div>
-      </div>
-
-      {/* Content side */}
-      <div className="w-full md:ml-[45%] section-padding">
-        <div className="max-w-2xl">
-          {/* Mobile photo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="md:hidden w-48 h-48 rounded-full overflow-hidden mx-auto mb-8 border-4 border-primary/20"
+          {/* Abstract blob shape using clip-path */}
+          <div
+            className="w-full h-full overflow-hidden"
+            style={{
+              clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
+            }}
           >
             <img
               src={profilePhoto}
               alt="Kuceli Susan Englama"
               className="w-full h-full object-cover object-top"
             />
-          </motion.div>
+          </div>
+          {/* Decorative offset border */}
+          <div
+            className="absolute inset-0 border-2 border-primary/30 translate-x-2 translate-y-2 -z-10"
+            style={{
+              clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
+            }}
+          />
+        </motion.div>
 
-          <motion.p
+        <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -121,7 +116,6 @@ const HeroSection = () => {
             ))}
           </motion.div>
         </div>
-      </div>
     </section>
   );
 };
