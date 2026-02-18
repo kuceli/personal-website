@@ -1,34 +1,43 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Experience", href: "/experience" },
+  { label: "Projects", href: "/projects" },
+  { label: "Education", href: "/education" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="flex items-center justify-between px-6 md:px-12 lg:px-24 h-16">
-        <a href="#" className="font-display text-xl">
+        <button
+          onClick={() => navigate("/")}
+          className="font-display text-xl hover:opacity-80 transition-opacity"
+        >
           K<span className="text-primary">.</span>E
-        </a>
+        </button>
 
         <div className="hidden md:flex gap-8">
           {links.map(({ label, href }) => (
-            <a
+            <NavLink
               key={label}
-              href={href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors font-medium"
+              to={href}
+              className={({ isActive }) =>
+                `text-sm font-medium transition-colors ${
+                  isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                }`
+              }
             >
               {label}
-            </a>
+            </NavLink>
           ))}
         </div>
 
@@ -51,14 +60,18 @@ const Navbar = () => {
           >
             <div className="flex flex-col px-6 py-4 gap-4">
               {links.map(({ label, href }) => (
-                <a
+                <NavLink
                   key={label}
-                  href={href}
+                  to={href}
                   onClick={() => setOpen(false)}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors font-medium"
+                  className={({ isActive }) =>
+                    `text-sm font-medium transition-colors ${
+                      isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                    }`
+                  }
                 >
                   {label}
-                </a>
+                </NavLink>
               ))}
             </div>
           </motion.div>
