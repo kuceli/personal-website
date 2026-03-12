@@ -21,7 +21,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6 }}
             className="text-primary font-body font-semibold tracking-widest uppercase text-sm mb-4"
           >
-            Software Engineer
+            Technical Product & Project Manager
           </motion.p>
 
           <motion.h1
