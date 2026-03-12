@@ -6,7 +6,7 @@ const socials = [
   { icon: Github, href: "https://github.com/kuceli", label: "GitHub" },
   { icon: Linkedin, href: "https://linkedin.com/in/kucelienglama", label: "LinkedIn" },
   { icon: Mail, href: "mailto:kse47@cornell.edu", label: "Email" },
-  { icon: ExternalLink, href: "https://medium.com/@englamakuceli", label: "Medium" },
+  { icon: ExternalLink, href: "https://kucelienglama.netlify.app", label: "Portfolio" },
 ];
 
 const HeroSection = () => {
