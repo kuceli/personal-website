@@ -1,45 +1,45 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github, X } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
 const projects = [
   {
-    title: "EduAfrica",
-    description: "Responsive online learning platform democratizing education across Africa.",
-    tags: ["React", "Frontend", "Stutern"],
-    fullDescription:
-      "EduAfrica is a responsive online learning platform designed to democratize education across Africa. Built during the Stutern Graduate Accelerator program, it features course catalogs, user dashboards, and an accessible UI optimized for low-bandwidth environments.",
-    github: "https://github.com/kuceli",
-    live: "#",
-    images: ["/placeholder.svg", "/placeholder.svg"],
-  },
-  {
     title: "AlertCap",
-    description: "EEG-based driver-fatigue safety wearable — product vision, market research & business model.",
+    description: "Defined product vision and validated market demands for an EEG-based driver safety wearable.",
     tags: ["Product", "Cornell", "IoT"],
     fullDescription:
-      "AlertCap is an EEG-based wearable designed to detect driver fatigue in real-time. As part of a Cornell project, I led the product vision, conducted market research, built the business model, and presented the go-to-market strategy to a panel of advisors.",
-    github: "https://github.com/kuceli",
-    live: "#",
-    images: ["/placeholder.svg", "/placeholder.svg"],
-  },
-  {
-    title: "Rehoboth Health Care",
-    description: "Patient-facing healthcare platform built with React and Tailwind, increasing patient engagement.",
-    tags: ["React", "Tailwind", "Healthcare"],
-    fullDescription:
-      "Rehoboth Health Care is a patient-facing healthcare platform built with React and Tailwind CSS. The application provides appointment scheduling, health records access, and telehealth features — resulting in measurably increased patient engagement.",
+      "AlertCap is an EEG-based wearable designed to detect driver fatigue in real-time. I defined the product vision, validated market demands, and projected $6.6M in first-year revenue. The project included go-to-market strategy, competitive analysis, and a pitch to a panel of advisors at Cornell.",
     github: "https://github.com/kuceli",
     live: "#",
     images: ["/placeholder.svg", "/placeholder.svg"],
   },
   {
     title: "Community Literacy Program",
-    description: "One-year literacy improvement program with full WBS, Gantt chart, and budget planning.",
+    description: "Collaborated with a cross-functional team of 12 on a one-year literacy improvement initiative.",
     tags: ["Project Management", "Cornell"],
     fullDescription:
-      "A comprehensive one-year community literacy improvement program developed at Cornell. Deliverables included a full Work Breakdown Structure (WBS), Gantt chart scheduling, risk analysis, resource allocation, and detailed budget planning.",
+      "A comprehensive one-year community literacy improvement program developed at Cornell. Collaborated with a cross-functional team of 12 to create a full Work Breakdown Structure (WBS), Gantt chart scheduling, risk analysis, resource allocation, and detailed budget planning.",
+    github: "https://github.com/kuceli",
+    live: "#",
+    images: ["/placeholder.svg", "/placeholder.svg"],
+  },
+  {
+    title: "Rehoboth Health Care",
+    description: "Delivered a responsive patient-facing healthcare platform that increased engagement by 40%.",
+    tags: ["React", "Tailwind", "Healthcare"],
+    fullDescription:
+      "Rehoboth Health Care is a patient-facing healthcare platform built with React and Tailwind CSS. The application provides appointment scheduling, health records access, and telehealth features — resulting in a 40% increase in patient engagement, along with supporting digital assets.",
+    github: "https://github.com/kuceli",
+    live: "#",
+    images: ["/placeholder.svg", "/placeholder.svg"],
+  },
+  {
+    title: "EduAfrica",
+    description: "Responsive online learning platform democratizing education across Africa.",
+    tags: ["React", "Frontend", "Stutern"],
+    fullDescription:
+      "EduAfrica is a responsive online learning platform designed to democratize education across Africa. Built during the Stutern Graduate Accelerator program, it features course catalogs, user dashboards, and an accessible UI optimized for low-bandwidth environments.",
     github: "https://github.com/kuceli",
     live: "#",
     images: ["/placeholder.svg", "/placeholder.svg"],
@@ -99,7 +99,6 @@ const ProjectsSection = () => {
         </div>
       </div>
 
-      {/* Project Detail Modal */}
       <Dialog open={!!selected} onOpenChange={(open) => !open && setSelected(null)}>
         <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto">
           {selected && (
@@ -111,7 +110,6 @@ const ProjectsSection = () => {
               </DialogHeader>
 
               <div className="space-y-6 mt-4">
-                {/* Tags */}
                 <div className="flex flex-wrap gap-2">
                   {selected.tags.map((tag) => (
                     <span
@@ -123,12 +121,10 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                {/* Description */}
                 <p className="text-muted-foreground leading-relaxed">
                   {selected.fullDescription}
                 </p>
 
-                {/* Project images */}
                 <div className="grid grid-cols-2 gap-4">
                   {selected.images.map((img, i) => (
                     <div
@@ -144,7 +140,6 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                {/* Links */}
                 <div className="flex flex-wrap gap-3 pt-2">
                   <a
                     href={selected.github}

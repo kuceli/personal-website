@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { category: "Languages", items: ["JavaScript", "TypeScript", "Python", "PHP", "SQL", "Java"] },
-  { category: "Frameworks", items: ["React", "Tailwind CSS", "Framer Motion", "Django"] },
-  { category: "Tools", items: ["Git", "Figma", "Adobe XD", "VS Code", "Jira", "Confluence"] },
+  { category: "Product Leadership", items: ["Scrum", "Sprint Planning", "Backlog Refinement", "Product Strategy", "Roadmap Planning", "UX Research", "Requirements Definition"] },
+  { category: "Project Management", items: ["Agile", "Cross-functional Collaboration", "Risk Management", "WBS", "Gantt", "Stakeholder Communication"] },
+  { category: "Technical", items: ["JavaScript", "TypeScript", "React", "Tailwind", "Python", "Django", "REST APIs", "SQL", "WordPress", "HTML/CSS"] },
+  { category: "Tools", items: ["Jira", "Confluence", "MS Project", "Figma", "Adobe XD", "Git/GitHub", "Trello", "Google Analytics"] },
   { category: "AI & Data", items: ["Python", "ML Fundamentals", "Data Analysis"] },
 ];
 
@@ -28,11 +29,14 @@ const AboutSection = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              I'm a Software Engineer with a Master of Engineering in Computer Science from Cornell University.
-              I specialize in building responsive, accessible frontend applications using React, TypeScript, and modern web technologies.
+              I'm a Technical Product & Project Manager with a Master of Engineering in Computer Science from Cornell University.
+              I specialize in leading Agile teams, defining requirements, and delivering user-centered digital solutions.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              CSM and CSPO certified, I bring clarity to complex problems, align cross-functional teams, and guide products from idea to impact.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Beyond engineering, I co-founded The Favor Busam Foundation, securing educational sponsorships for 300+ children in Nigeria.
+              Beyond my professional work, I co-founded The Favor Busam Foundation, securing educational sponsorships for 300+ children in Nigeria.
               I believe technology should serve people — and I bring that philosophy to everything I build.
             </p>
           </motion.div>

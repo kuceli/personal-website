@@ -6,7 +6,7 @@ const socials = [
   { icon: Github, href: "https://github.com/kuceli", label: "GitHub" },
   { icon: Linkedin, href: "https://linkedin.com/in/kucelienglama", label: "LinkedIn" },
   { icon: Mail, href: "mailto:kse47@cornell.edu", label: "Email" },
-  { icon: ExternalLink, href: "https://medium.com/@englamakuceli", label: "Medium" },
+  { icon: ExternalLink, href: "https://kucelienglama.netlify.app", label: "Portfolio" },
 ];
 
 const HeroSection = () => {
@@ -21,7 +21,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6 }}
             className="text-primary font-body font-semibold tracking-widest uppercase text-sm mb-4"
           >
-            Software Engineer
+            Technical Product & Project Manager
           </motion.p>
 
           <motion.h1
@@ -50,8 +50,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-muted-foreground text-lg md:text-xl max-w-xl mb-10 font-light leading-relaxed"
           >
-            Frontend developer & Cornell M.Eng graduate crafting accessible, performant web experiences.
-            Passionate about building products that make a difference.
+            Technical Product & Project Manager with a strong software engineering background. CSM and CSPO certified, skilled at bringing clarity to complex problems and guiding products from idea to impact.
           </motion.p>
 
           <motion.div
