@@ -10,17 +10,21 @@ const education = [
   },
   {
     degree: "Bachelor of Science in Software Engineering",
-    school: "American University of Nigeria",
+    school: "American University of Nigeria, Adamawa, Nigeria",
     gpa: "GPA: 3.85/4.0",
     year: "May 2022",
   },
 ];
 
 const certs = [
-  "Product Management 101 — Simplilearn (2026)",
-  "ML & AI Fundamentals — AWS (2025)",
-  "Responsive Web Design — freeCodeCamp (2024)",
-  "Best Graduating Student — AUN SITC (2022)",
+  "CSM — Scrum Alliance",
+  "CSPO — Scrum Alliance",
+  "Product Management Course — PMhelp",
+  "Product Management 101 — Simplilearn",
+  "Fundamentals of ML and AI — AWS",
+  "Responsive Web Design — freeCodeCamp",
+  "Frontend Development Course — Stutern",
+  "Best Graduating Student — AUN School of IT & Computing",
 ];
 
 const EducationSection = () => {
