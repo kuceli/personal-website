@@ -9,13 +9,31 @@ interface NavLinkCompatProps extends Omit<NavLinkProps, "className"> {
 }
 
 const NavLink = forwardRef<HTMLAnchorElement, NavLinkCompatProps>(
-  ({ className, activeClassName, pendingClassName, to, ...props }, ref) => {
+  (
+    { className, activeClassName, pendingClassName, to, onClick, ...props },
+    ref,
+  ) => {
+    const isSection = typeof to === "string" && to.startsWith("#");
+    const sectionId = isSection ? to.slice(1) : null;
+
     return (
       <RouterNavLink
         ref={ref}
-        to={to}
+        to={isSection ? "" : to}
+        onClick={(e) => {
+          if (isSection && sectionId) {
+            e.preventDefault();
+            const el = document.getElementById(sectionId);
+            el?.scrollIntoView({ behavior: "smooth" });
+          }
+          onClick?.(e);
+        }}
         className={({ isActive, isPending }) =>
-          cn(className, isActive && activeClassName, isPending && pendingClassName)
+          cn(
+            className,
+            isActive && activeClassName,
+            isPending && pendingClassName,
+          )
         }
         {...props}
       />

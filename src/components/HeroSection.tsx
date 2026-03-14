@@ -24,14 +24,6 @@ const HeroSection = () => {
       <div className="relative z-10 w-full flex flex-col-reverse md:flex-row items-center md:items-center md:justify-between gap-10 max-w-6xl mx-auto">
         {/* Text content */}
         <div className="flex-1 text-center md:text-left">
-          {/* <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-primary font-body font-semibold tracking-widest uppercase text-sm mb-4"
-          >
-            Technical Product & Project Manager
-          </motion.p> */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
