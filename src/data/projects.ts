@@ -1,7 +1,10 @@
-import projectMini from "@/assets/project-mini.jpg";
-import projectCloned from "@/assets/project-cloned.jpg";
-import projectSplash from "@/assets/project-splash.jpg";
-import projectMealy from "@/assets/project-mealy.jpg";
+import projectMini from "@/assets/miniprojects.png";
+import projectCloned from "@/assets/clonedProjects.png";
+import eduAfrica from "@/assets/eduafrica.png";
+import rehoboth from "@/assets/rehoboth.png";
+import mealy from "@/assets/mealy.png";
+import splashscreen from "@/assets/splashscreen.png";
+import mercySite from "@/assets/mercy-site.png";
 
 export type Project = {
   title: string;
@@ -11,79 +14,122 @@ export type Project = {
   github?: string;
   live?: string;
   thumbnail: string;
+  subProjects?: { label: string; url: string }[];
 };
 
 export const projects: Project[] = [
   {
-    title: "AlertCap",
-    description: "Defined product vision and validated market demands for an EEG-based driver safety wearable.",
-    tags: ["Product", "Cornell", "IoT"],
-    fullDescription:
-      "AlertCap is an EEG-based wearable designed to detect driver fatigue in real-time. I defined the product vision, validated market demands, and projected $6.6M in first-year revenue. The project included go-to-market strategy, competitive analysis, and a pitch to a panel of advisors at Cornell.",
-    github: "https://github.com/kuceli",
-    thumbnail: "/placeholder.svg",
-  },
-  {
-    title: "Community Literacy Program",
-    description: "Collaborated with a cross-functional team of 12 on a one-year literacy improvement initiative.",
-    tags: ["Project Management", "Cornell"],
-    fullDescription:
-      "A comprehensive one-year community literacy improvement program developed at Cornell. Collaborated with a cross-functional team of 12 to create a full Work Breakdown Structure (WBS), Gantt chart scheduling, risk analysis, resource allocation, and detailed budget planning.",
-    github: "https://github.com/kuceli",
-    thumbnail: "/placeholder.svg",
-  },
-  {
     title: "Rehoboth Health Care",
-    description: "Delivered a responsive patient-facing healthcare platform that increased engagement by 40%.",
-    tags: ["React", "Tailwind", "Healthcare"],
+    description:
+      "Responsive patient-facing healthcare website, accompanied by branding materials including a logo and informational pamphlet.",
+    tags: ["React", "Tailwind", "SEO"],
     fullDescription:
-      "Rehoboth Health Care is a patient-facing healthcare platform built with React and Tailwind CSS. The application provides appointment scheduling, health records access, and telehealth features — resulting in a 40% increase in patient engagement, along with supporting digital assets.",
-    github: "https://github.com/kuceli",
-    thumbnail: "/placeholder.svg",
+      "Rehoboth Health Care is a patient-facing healthcare platform built using React and Tailwind CSS. The project also includes a branding package, featuring the company’s logo and informational pamphlet, designed in Canva to help establish a strong and consistent brand identity.",
+    live: "https://drive.google.com/drive/folders/1hWsoXZBn2fRjtbInGByylozuMzpyTihc?usp=drive_link",
+    github: "https://github.com/kuceli/rehobothhealthcarellc",
+    thumbnail: rehoboth,
   },
   {
     title: "EduAfrica",
-    description: "Responsive online learning platform democratizing education across Africa.",
+    description:
+      "Responsive online learning platform democratizing education across Africa.",
     tags: ["React", "Frontend", "Stutern"],
     fullDescription:
       "EduAfrica is a responsive online learning platform designed to democratize education across Africa. Built during the Stutern Graduate Accelerator program, it features course catalogs, user dashboards, and an accessible UI optimized for low-bandwidth environments.",
-    github: "https://github.com/kuceli",
-    thumbnail: "/placeholder.svg",
+    live: "https://main--aducloud.netlify.app/",
+    thumbnail: eduAfrica,
   },
   {
     title: "Mini Projects Collection",
-    description: "A collection of skill-building projects including a To-Do List, Calculator, Tic Tac Toe, and more.",
+    description:
+      "A collection of skill-building projects including a To-Do List, Calculator, Tic Tac Toe, and more.",
     tags: ["HTML", "CSS", "JavaScript", "React"],
     fullDescription:
-      "A collection of projects built to sharpen my frontend skills. Includes a To-Do List, Contact Form, Calculator, Tic Tac Toe Game, Star Wars App, and Profile Search App. Some are replicated projects while others are original designs, built using HTML, CSS, JS, and ReactJS.",
-    live: "https://kucelienglamaminiprojects.netlify.app",
+      "A collection of projects built to sharpen my frontend skills. Some are replicated projects while others are original designs, built using HTML, CSS, JS, and ReactJS.",
     thumbnail: projectMini,
+    subProjects: [
+      {
+        label: "To‑Do List",
+        url: "https://todolistbykuceli.netlify.app/",
+      },
+      {
+        label: "Calculator",
+        url: "https://calculatorbykuceli.netlify.app",
+      },
+      {
+        label: "Tic Tac Toe",
+        url: "https://tictactoebykuceli.netlify.app/",
+      },
+      {
+        label: "Contact Form",
+        url: "https://contactformbykuceli.netlify.app/",
+      },
+      {
+        label: "Star Wars App",
+        url: "https://starwarsappbykuceli.netlify.app/",
+      },
+      {
+        label: "Profile Search App",
+        url: "https://profile-search-app-by-kuceli.netlify.app/",
+      },
+    ],
   },
+
   {
-    title: "Cloned Sites",
-    description: "Pixel-perfect replications of Netflix, Udemy, Instagram, and Google landing pages.",
-    tags: ["HTML", "CSS", "JavaScript"],
+    title: "Professional Portfolio Website",
+    description:
+      "Responsive portfolio built to highlight advocacy work on global development issues",
+    tags: ["React.js", "Tailwind CSS"],
     fullDescription:
-      "A showcase of impeccably replicated webpages including the Netflix landing page, Udemy landing page, Instagram home page, and Google search page among others. Designed using HTML, CSS, and JavaScript to demonstrate attention to detail and frontend proficiency.",
-    live: "https://kucelienglamaclonedsites.netlify.app",
-    thumbnail: projectCloned,
+      "This project involved designing and developing a responsive portfolio website using React.js and Tailwind CSS. It was created to effectively showcase advocacy efforts of a client focused on global development issues, while also strengthening digital visibility and presenting content in a clean, accessible, and engaging format.",
+    live: "https://mercyabutsa.netlify.app/",
+    thumbnail: mercySite,
   },
   {
     title: "Splash Screen",
-    description: "An animated splash screen built as a JavaScript challenge without prior JS knowledge.",
-    tags: ["JavaScript", "CSS", "Animation"],
+    description:
+      "An animated splash screen built as a JavaScript challenge without prior JS knowledge.",
+    tags: ["JavaScript"],
     fullDescription:
-      "This was a challenge given to me at iTech Computer Education, Abuja to work on the functionality of this splash screen without prior knowledge of JavaScript. It demonstrates CSS animations and JS-driven transitions for a polished loading experience.",
-    live: "https://splashscreenbykuceli.netlify.app",
-    thumbnail: projectSplash,
+      "This was a challenge given to me at iTech Computer Education, Abuja to work on the functionality of this splash screen without prior knowledge of Js.",
+    live: "https://splashscreenbykuceli.netlify.app/",
+    thumbnail: splashscreen,
   },
   {
     title: "Mealy",
-    description: "A food ordering app designed as a final project for the Stutern software development course.",
+    description:
+      "A food ordering app designed as a final project for the Stutern software development course.",
     tags: ["React", "Team Project", "Stutern"],
     fullDescription:
       "Mealy is a food ordering app designed by me and my team as a final project to sum up our software development course at Stutern. It features location-based ordering, a menu carousel, and a modern UI with an orange-themed design system.",
     live: "https://project-mealy.netlify.app",
-    thumbnail: projectMealy,
+    thumbnail: mealy,
+  },
+  {
+    title: "Cloned Sites",
+    description:
+      "Pixel-perfect replications of Netflix, Udemy, Instagram, and Google landing pages.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    fullDescription:
+      "An impeccably replicated webpages including the Netflix landing page, Udemy landing page, Instagram home page, and Google search page among others. Designed using HTML, CSS, and JavaScript to demonstrate attention to detail and frontend proficiency.",
+    thumbnail: projectCloned,
+    subProjects: [
+      {
+        label: "Google Search Page",
+        url: "https://googlebykuceli.netlify.app/",
+      },
+      {
+        label: "Netflix",
+        url: "https://github.com/kuceli/NetflixClone",
+      },
+      {
+        label: "Udemy",
+        url: "https://udemybykuceli.netlify.app/",
+      },
+      {
+        label: "Instagram",
+        url: "https://github.com/kuceli/InstagramClone/",
+      },
+    ],
   },
 ];

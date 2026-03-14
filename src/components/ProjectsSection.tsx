@@ -2,7 +2,12 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { projects, type Project } from "@/data/projects";
 
 const HOMEPAGE_LIMIT = 4;
@@ -43,7 +48,9 @@ const ProjectsSection = () => {
               </div>
               <div className="p-6 md:p-8">
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="font-display text-xl md:text-2xl">{project.title}</h3>
+                  <h3 className="font-display text-xl md:text-2xl">
+                    {project.title}
+                  </h3>
                   <ExternalLink
                     size={18}
                     className="text-muted-foreground group-hover:text-primary transition-colors shrink-0 mt-1"
@@ -83,7 +90,10 @@ const ProjectsSection = () => {
         </motion.div>
       </div>
 
-      <Dialog open={!!selected} onOpenChange={(open) => !open && setSelected(null)}>
+      <Dialog
+        open={!!selected}
+        onOpenChange={(open) => !open && setSelected(null)}
+      >
         <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto">
           {selected && (
             <>
@@ -137,7 +147,7 @@ const ProjectsSection = () => {
                       className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
                     >
                       <ExternalLink size={16} />
-                      Live Demo
+                      View here
                     </a>
                   )}
                 </div>

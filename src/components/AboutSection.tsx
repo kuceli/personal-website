@@ -1,11 +1,61 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { category: "Product Leadership", items: ["Scrum", "Sprint Planning", "Backlog Refinement", "Product Strategy", "Roadmap Planning", "UX Research", "Requirements Definition"] },
-  { category: "Project Management", items: ["Agile", "Cross-functional Collaboration", "Risk Management", "WBS", "Gantt", "Stakeholder Communication"] },
-  { category: "Technical", items: ["JavaScript", "TypeScript", "React", "Tailwind", "Python", "Django", "REST APIs", "SQL", "WordPress", "HTML/CSS"] },
-  { category: "Tools", items: ["Jira", "Confluence", "MS Project", "Figma", "Adobe XD", "Git/GitHub", "Trello", "Google Analytics"] },
-  { category: "AI & Data", items: ["Python", "ML Fundamentals", "Data Analysis"] },
+  {
+    category: "Product Leadership",
+    items: [
+      "Scrum",
+      "Sprint Planning",
+      "Backlog Refinement",
+      "Product Strategy",
+      "Roadmap Planning",
+      "UX Research",
+      "Requirements Definition",
+    ],
+  },
+  {
+    category: "Project Management",
+    items: [
+      "Agile",
+      "Cross-functional Collaboration",
+      "Risk Management",
+      "WBS",
+      "Gantt",
+      "Stakeholder Communication",
+    ],
+  },
+  {
+    category: "Technical",
+    items: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Tailwind",
+      "Python",
+      "Django",
+      "REST APIs",
+      "SQL",
+      "WordPress",
+      "HTML/CSS",
+    ],
+  },
+  {
+    category: "Tools",
+    items: [
+      "Jira",
+      "Confluence",
+      "MS Project",
+      "Figma",
+      "Adobe XD",
+      "Git/GitHub",
+      "Trello",
+      "Google Analytics",
+    ],
+  },
+  {
+    category: "AI & Data",
+    items: ["Python", "ML Fundamentals", "Data Analysis"],
+  },
 ];
 
 const AboutSection = () => {
@@ -28,16 +78,28 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              I'm a Technical Product & Project Manager with a Master of Engineering in Computer Science from Cornell University.
-              I specialize in leading Agile teams, defining requirements, and delivering user-centered digital solutions.
+            <p className="text-muted-foreground text-base leading-relaxed mb-6 text-justify">
+              With a foundation in software engineering and a Master of
+              Engineering in Computer Science from Cornell University, my work
+              sits at the intersection of technology, clarity, and human need.
+              I’m drawn to environments where ideas are still forming, problems
+              are messy, and teams need someone who can bring structure,
+              intention, and momentum.
             </p>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              CSM and CSPO certified, I bring clarity to complex problems, align cross-functional teams, and guide products from idea to impact.
+            <p className="text-muted-foreground text-base leading-relaxed mb-6 text-justify">
+              My experience spans leading Agile teams, shaping requirements, and
+              delivering user‑centered digital solutions. My CSM and CSPO
+              background guide how I collaborate, aligning cross‑functional
+              teams, simplifying complexity, and helping products move from
+              early concept to meaningful impact.
             </p>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Beyond my professional work, I co-founded The Favor Busam Foundation, securing educational sponsorships for 300+ children in Nigeria.
-              I believe technology should serve people — and I bring that philosophy to everything I build.
+            <p className="text-muted-foreground text-base leading-relaxed text-justify">
+              Outside of my technical work, I co‑founded The Favor Busam
+              Foundation, supporting underserved communities and securing
+              educational sponsorships for hundreds of children in Nigeria. That
+              experience grounds my belief that meaningful solutions start with
+              people — a principle that shapes how I build, lead, and make
+              decisions.
             </p>
           </motion.div>
 

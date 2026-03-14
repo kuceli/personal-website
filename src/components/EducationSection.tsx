@@ -17,8 +17,8 @@ const education = [
 ];
 
 const certs = [
-  "CSM — Scrum Alliance",
-  "CSPO — Scrum Alliance",
+  "Certified Scrum Master (CSM) — Scrum Alliance",
+  "Certified Scrum Product Owner (CSPO) - Scrum Alliance",
   "Product Management Course — PMhelp",
   "Product Management 101 — Simplilearn",
   "Fundamentals of ML and AI — AWS",
@@ -77,8 +77,11 @@ const EducationSection = () => {
             </h3>
             <ul className="space-y-3">
               {certs.map((cert, i) => (
-                <li key={i} className="text-muted-foreground text-sm flex gap-2">
-                  <span className="text-primary mt-0.5">—</span>
+                <li
+                  key={i}
+                  className="text-muted-foreground text-sm flex gap-2"
+                >
+                  <span className="text-primary mt-0.5">✢</span>
                   {cert}
                 </li>
               ))}

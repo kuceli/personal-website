@@ -2,8 +2,14 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { projects, type Project } from "@/data/projects";
+import logo from "@/assets/1-NoBackground.png";
 
 const Projects = () => {
   const [selected, setSelected] = useState<Project | null>(null);
@@ -11,9 +17,13 @@ const Projects = () => {
   return (
     <main className="min-h-screen bg-background">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-        <div className="flex items-center justify-between px-6 md:px-12 lg:px-24 h-16">
-          <Link to="/" className="font-display text-xl">
-            K<span className="text-primary">.</span>E
+        <div className="flex items-center justify-between px-6 md:px-12 lg:px-32 h-16">
+          <Link to="/" className="h-full py-2">
+            <img
+              src={logo}
+              alt="Kuceli Susan Englama"
+              className="w-full h-full"
+            />
           </Link>
           <Link
             to="/"
@@ -30,18 +40,10 @@ const Projects = () => {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-display text-4xl md:text-6xl mb-4"
+            className="font-display text-4xl md:text-6xl mb-12"
           >
             All Projects
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-muted-foreground text-lg mb-16 max-w-2xl"
-          >
-            A collection of product, design, and development work spanning healthcare, education, and consumer tech.
-          </motion.p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {projects.map((project, i) => (
@@ -62,7 +64,9 @@ const Projects = () => {
                 </div>
                 <div className="p-5 md:p-6">
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="font-display text-lg md:text-xl">{project.title}</h3>
+                    <h3 className="font-display text-lg md:text-xl">
+                      {project.title}
+                    </h3>
                     <ExternalLink
                       size={16}
                       className="text-muted-foreground group-hover:text-primary transition-colors shrink-0 mt-1"
@@ -92,7 +96,10 @@ const Projects = () => {
         © {new Date().getFullYear()} Kuceli Susan Englama. All rights reserved.
       </footer>
 
-      <Dialog open={!!selected} onOpenChange={(open) => !open && setSelected(null)}>
+      <Dialog
+        open={!!selected}
+        onOpenChange={(open) => !open && setSelected(null)}
+      >
         <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto">
           {selected && (
             <>
@@ -126,7 +133,7 @@ const Projects = () => {
                   {selected.fullDescription}
                 </p>
 
-                <div className="flex flex-wrap gap-3 pt-2">
+                {/* <div className="flex flex-wrap gap-3 pt-2">
                   {selected.github && (
                     <a
                       href={selected.github}
@@ -146,7 +153,46 @@ const Projects = () => {
                       className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
                     >
                       <ExternalLink size={16} />
-                      Live Demo
+                      View here
+                    </a>
+                  )}
+                </div> */}
+                <div className="flex flex-wrap gap-3 pt-2">
+                  {selected.subProjects
+                    ? selected.subProjects.map((sp) => (
+                        <a
+                          key={sp.label}
+                          href={sp.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
+                        >
+                          <ExternalLink size={16} />
+                          {sp.label}
+                        </a>
+                      ))
+                    : selected.live &&
+                      selected.live !== "#" && (
+                        <a
+                          href={selected.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
+                        >
+                          <ExternalLink size={16} />
+                          View here
+                        </a>
+                      )}
+
+                  {selected.github && (
+                    <a
+                      href={selected.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-border text-sm font-medium text-foreground hover:border-primary hover:text-primary transition-colors"
+                    >
+                      <Github size={16} />
+                      View on GitHub
                     </a>
                   )}
                 </div>

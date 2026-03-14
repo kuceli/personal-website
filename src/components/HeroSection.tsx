@@ -1,12 +1,21 @@
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.png";
+import profilePhoto from "@/assets/img.jpg";
 
 const socials = [
+  {
+    icon: Linkedin,
+    href: "https://linkedin.com/in/kucelienglama",
+    label: "LinkedIn",
+  },
   { icon: Github, href: "https://github.com/kuceli", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/kucelienglama", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:kse47@cornell.edu", label: "Email" },
-  { icon: ExternalLink, href: "https://kucelienglama.netlify.app", label: "Portfolio" },
+  { icon: Mail, href: "mailto:englamakuceli@gmail.com", label: "Email" },
+  {
+    icon: ExternalLink,
+    href: "https://medium.com/@englamakuceli",
+    label: "Medium",
+  },
 ];
 
 const HeroSection = () => {
@@ -15,23 +24,37 @@ const HeroSection = () => {
       <div className="relative z-10 w-full flex flex-col-reverse md:flex-row items-center md:items-center md:justify-between gap-10 max-w-6xl mx-auto">
         {/* Text content */}
         <div className="flex-1 text-center md:text-left">
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-primary font-body font-semibold tracking-widest uppercase text-sm mb-4"
           >
             Technical Product & Project Manager
-          </motion.p>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+          </motion.p> */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display text-5xl md:text-7xl lg:text-8xl leading-tight mb-2"
+            transition={{ duration: 0.6 }}
+            className="text-primary font-body font-semibold tracking-widest uppercase text-sm mb-4"
           >
-            Kuceli Susan
-          </motion.h1>
+            <Typewriter
+              words={[
+                "Technical Project Manager",
+                "Technical Product Manager",
+                "Scrum Master",
+                "Product Owner",
+                "Software Engineer",
+                "Graphics Designer",
+              ]}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={40}
+              delaySpeed={1500}
+            />
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -39,7 +62,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
           >
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-tight mb-4">
-              <span className="text-gradient">Englama</span>
+              Kuceli <span className="text-gradient">Englama</span>
             </h1>
             <div className="w-20 h-1 bg-primary mb-8 mx-auto md:mx-0" />
           </motion.div>
@@ -48,9 +71,11 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-muted-foreground text-lg md:text-xl max-w-xl mb-10 font-light leading-relaxed"
+            className="text-muted-foreground text-sm md:text-lg max-w-xl mb-10 font-light"
           >
-            Technical Product & Project Manager with a strong software engineering background. CSM and CSPO certified, skilled at bringing clarity to complex problems and guiding products from idea to impact.
+            Centered on understanding people, simplifying complexity, and
+            shaping digital solutions that feel clear, intentional, and
+            genuinely useful.
           </motion.p>
 
           <motion.div
@@ -60,7 +85,7 @@ const HeroSection = () => {
             className="flex flex-wrap gap-4 mb-8 justify-center md:justify-start"
           >
             <a
-              href="https://drive.google.com/file/d/1wNuPvouf5B2wOCUlL12FuCo-twj03Rnp/view?usp=sharing"
+              href="https://drive.google.com/file/d/1rBVfbPmxqfugCIHRiysX48Ozo18bgv6J/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
@@ -100,7 +125,8 @@ const HeroSection = () => {
           <div
             className="w-full h-full overflow-hidden"
             style={{
-              clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
+              clipPath:
+                "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
             }}
           >
             <img
@@ -112,7 +138,8 @@ const HeroSection = () => {
           <div
             className="absolute inset-0 border-2 border-primary/30 translate-x-2 translate-y-2 -z-10"
             style={{
-              clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
+              clipPath:
+                "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
             }}
           />
         </motion.div>

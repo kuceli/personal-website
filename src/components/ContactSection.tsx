@@ -3,7 +3,10 @@ import { Mail, Linkedin, Github, ExternalLink } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="section-padding bg-secondary text-secondary-foreground">
+    <section
+      id="contact"
+      className="section-padding bg-secondary text-secondary-foreground"
+    >
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -18,9 +21,10 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-secondary-foreground/70 text-lg mb-12 max-w-lg mx-auto"
+          className="text-secondary-foreground/70 text-base mb-12 max-w-lg mx-auto"
         >
-          I'm always open to discussing new opportunities, collaborations, or just chatting about tech.
+          I'm always open to discussing new opportunities, collaborations, or
+          just chatting about tech.
         </motion.p>
 
         <motion.div
