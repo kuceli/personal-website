@@ -35,7 +35,7 @@ const ContactSection = () => {
           className="flex flex-wrap justify-center gap-4"
         >
           <a
-            href="mailto:kse47@cornell.edu"
+            href="mailto:englamakuceli@gmail.com"
             className="flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
           >
             <Mail size={18} />
