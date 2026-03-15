@@ -68,7 +68,6 @@ const Navbar = () => {
                 <NavLink
                   key={label}
                   to={`#${href}`}
-                  onClick={() => setOpen(false)}
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors font-medium"
                 >
                   {label}
