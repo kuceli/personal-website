@@ -18,12 +18,14 @@ const Projects = () => {
     <main className="min-h-screen bg-background">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="flex items-center justify-between px-6 md:px-12 lg:px-32 h-16">
-          <Link to="/" className="h-full py-2">
-            <img
-              src={logo}
-              alt="Kuceli Susan Englama"
-              className="w-full h-full"
-            />
+          <Link to="/" className="h-full py-2 flex items-center">
+          
+          <img
+            src={logo}
+            alt="Kuceli Susan Englama"
+            className="h-full w-auto object-contain"
+          />
+     
           </Link>
           <Link
             to="/"
