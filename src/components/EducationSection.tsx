@@ -17,14 +17,14 @@ const education = [
 ];
 
 const certs = [
-  "Certified Scrum Master (CSM) — Scrum Alliance",
+  "Certified Scrum Master (CSM) - Scrum Alliance",
   "Certified Scrum Product Owner (CSPO) - Scrum Alliance",
-  "Product Management Course — PMhelp",
-  "Product Management 101 — Simplilearn",
-  "Fundamentals of ML and AI — AWS",
-  "Responsive Web Design — freeCodeCamp",
-  "Frontend Development Course — Stutern",
-  "Best Graduating Student — AUN School of IT & Computing",
+  "Product Management Course -  PMhelp",
+  "Product Management 101 - Simplilearn",
+  "Fundamentals of ML and AI - AWS",
+  "Responsive Web Design - freeCodeCamp",
+  "Frontend Development Course - Stutern",
+  "Best Graduating Student - AUN School of IT & Computing",
 ];
 
 const EducationSection = () => {
