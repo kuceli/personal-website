@@ -10,6 +10,15 @@ const experiences = [
       "Improved the usability and visibility of multiple client WordPress platforms through stronger SEO and accessibility, while delivering work more smoothly by clarifying requirements and keeping technical efforts aligned with business goals.",
     ],
   },
+   {
+    role: "Co-Founder",
+    company: "The Favor Busam Foundation",
+    period: "Jul 2019 – Present",
+    location: "Abuja, Nigeria",
+    highlights: [
+      "Led community and fundraising initiatives that expanded educational support to hundreds of children, organizing outreach efforts and sustaining long‑term impact.",
+    ],
+  },
   {
     role: "Information Technology Board Member",
     company: "Museum of Political Corruption",
@@ -74,15 +83,7 @@ const experiences = [
       "Guided the organization’s operations and product direction, coordinating a development team and producing strategic materials that supported growth in the blockchain and NFT space.",
     ],
   },
-  {
-    role: "Co-Founder",
-    company: "The Favor Busam Foundation",
-    period: "Jul 2019 – Nov 2024",
-    location: "Abuja, Nigeria",
-    highlights: [
-      "Led community and fundraising initiatives that expanded educational support to hundreds of children, organizing outreach efforts and sustaining long‑term impact.",
-    ],
-  },
+ 
 ];
 
 const ExperienceSection = () => {
