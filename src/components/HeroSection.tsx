@@ -77,7 +77,7 @@ const HeroSection = () => {
             className="flex flex-wrap gap-4 mb-8 justify-center md:justify-start"
           >
             <a
-              href="https://drive.google.com/file/d/1rBVfbPmxqfugCIHRiysX48Ozo18bgv6J/view?usp=sharing"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300"
