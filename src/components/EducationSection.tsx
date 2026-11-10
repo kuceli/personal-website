@@ -17,6 +17,7 @@ const education = [
 ];
 
 const certs = [
+  "AWS Certified Cloud Practitioner - AWS",
   "Certified Scrum Master (CSM) - Scrum Alliance",
   "Certified Scrum Product Owner (CSPO) - Scrum Alliance",
   "Product Management Course -  PMhelp",
